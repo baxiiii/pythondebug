@@ -7,7 +7,12 @@ def calculate_area(length, width):
 length = input("Enter the length of the rectangle: ")
 width = input("Enter the width of the rectangle: ")
 
-length = int(length)
-width = int(width)
+try:
+    
+    length = int(length)
+    width = int(width)
+    print("The area of the rectangle is:", calculate_area(length, width))
 
-print("The area of the rectangle is:", calculate_area(length, width))
+except ValueError:
+    print("Error: Please enter an integer")
+
